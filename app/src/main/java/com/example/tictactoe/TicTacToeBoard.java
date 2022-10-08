@@ -57,7 +57,8 @@ class TicTacToeBoard extends View {
 
         drawGameBoard(canvas);
 
-        drawX(canvas, 0, 2);
+        drawX(canvas, 1, 1);
+        drawO(canvas, 0, 0);
     }
 
     private void drawGameBoard(Canvas canvas){
@@ -78,21 +79,31 @@ class TicTacToeBoard extends View {
     private void drawX(Canvas canvas, int row, int col){
         paint.setColor(XColor);
 
-        canvas.drawLine((col + 1) * cellSize,
-                        row * cellSize,
-                        col * cellSize,
-                        (row + 1) * cellSize,
+        canvas.drawLine(
+                (float) ((col + 1) * cellSize + cellSize * 0.2),
+                (float) (row * cellSize + cellSize * 0.2),
+                (float) (col * cellSize + cellSize * 0.2),
+                (float) ((row + 1) * cellSize + cellSize * 0.2),
                         paint);
-        canvas.drawLine(col * cellSize,
-                        row * cellSize,
-                        (col + 1) * cellSize,
-                        (row + 1) * cellSize,
+        canvas.drawLine(
+                (float)(col * cellSize + cellSize * 0.2) ,
+                (float)(row * cellSize + cellSize * 0.2),
+                (float)((col + 1) * cellSize + cellSize * 0.2),
+                (float)((row + 1) * cellSize + cellSize * 0.2),
                         paint);
     }
 
     // This method will draw O on the Game board
     private void drawO(Canvas canvas, int row, int col){
         paint.setColor(OColor);
+
+        canvas.drawOval(
+                (float)(col * cellSize + cellSize * 0.2),
+                (float)(row * cellSize + cellSize * 0.2) ,
+                (float)((col * cellSize + cellSize + cellSize * 0.2)),
+                (float)((row * cellSize + cellSize + cellSize * 0.2)),
+                            paint);
+
     }
 
 }
