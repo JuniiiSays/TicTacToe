@@ -69,6 +69,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
         android:background="@drawable/red_button"
+        android:onClick="submitButtonClick"
         android:padding="16dp"
         android:text="@string/playerSetupSubmitButton"
         app:layout_constraintEnd_toEndOf="parent"

@@ -17,8 +17,15 @@ public class GameDisplay extends AppCompatActivity {
         setContentView(R.layout.game_display);
 
 
-
     }
 
+    public void playAgainButtonClick(View view){
+        // Do Fancy Stuff
+    }
+
+    public void homeButtonClick(View view){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
 
 }
