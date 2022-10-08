@@ -80,16 +80,16 @@ class TicTacToeBoard extends View {
         paint.setColor(XColor);
 
         canvas.drawLine(
-                (float) ((col + 1) * cellSize + cellSize * 0.2),
+                (float) ((col + 1) * cellSize - cellSize * 0.2),
                 (float) (row * cellSize + cellSize * 0.2),
                 (float) (col * cellSize + cellSize * 0.2),
-                (float) ((row + 1) * cellSize + cellSize * 0.2),
+                (float) ((row + 1) * cellSize - cellSize * 0.2),
                         paint);
         canvas.drawLine(
                 (float)(col * cellSize + cellSize * 0.2) ,
                 (float)(row * cellSize + cellSize * 0.2),
-                (float)((col + 1) * cellSize + cellSize * 0.2),
-                (float)((row + 1) * cellSize + cellSize * 0.2),
+                (float)((col + 1) * cellSize - cellSize * 0.2),
+                (float)((row + 1) * cellSize - cellSize * 0.2),
                         paint);
     }
 
@@ -100,8 +100,8 @@ class TicTacToeBoard extends View {
         canvas.drawOval(
                 (float)(col * cellSize + cellSize * 0.2),
                 (float)(row * cellSize + cellSize * 0.2) ,
-                (float)((col * cellSize + cellSize + cellSize * 0.2)),
-                (float)((row * cellSize + cellSize + cellSize * 0.2)),
+                (float)((col * cellSize + cellSize - cellSize * 0.2)),
+                (float)((row * cellSize + cellSize - cellSize * 0.2)),
                             paint);
 
     }
