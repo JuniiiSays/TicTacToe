@@ -9,4 +9,7 @@
     <string name="playerSetupLabel2">Player 2</string>
     <string name="playerSetupSubmitButton">Submit Names</string>
     <string name="playerSetupNameHint">Enter Your Name</string>
+
+    <string name="playAgainButton">Play Again</string>
+    <string name="returnHome">Home</string>
 </resources>
