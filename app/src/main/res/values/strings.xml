@@ -3,8 +3,8 @@
 
     <string name="home_text_view">Tic Tac Toe</string>
     <string name="home_button_play">Play</string>
-    
-    <string name="playerSetupTitle">Enter Your Name</string>
+
+    <string name="playerSetupTitle">Enter Your Names</string>
     <string name="playerSetupLabel1">Player 1</string>
     <string name="playerSetupLabel2">Player 2</string>
     <string name="playerSetupSubmitButton">Submit Names</string>
