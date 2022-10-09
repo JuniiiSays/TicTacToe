@@ -96,6 +96,13 @@ class GameLogic {
             gameBoard[r][c] = 0;
          }
       }
+
+      player = 1;
+      playAgainBTN.setVisibility(View.GONE);
+      homeBTN.setVisibility(View.GONE);
+
+      playerTurn.setText((playerNames[0] + "'s Turn"));
+
    }
 
    public int[][] getGameBoard() {

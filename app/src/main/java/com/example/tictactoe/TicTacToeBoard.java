@@ -173,6 +173,7 @@ class TicTacToeBoard extends View {
 
     public void resetGame(){
         game.resetGame();
+        winningLine = false;
     }
 
 }
