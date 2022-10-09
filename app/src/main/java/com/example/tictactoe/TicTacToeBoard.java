@@ -58,7 +58,7 @@ class TicTacToeBoard extends View {
         drawGameBoard(canvas);
 
         drawX(canvas, 1, 1);
-        drawO(canvas, 0, 0);
+        drawO(canvas, 0, 1);
     }
 
     private void drawGameBoard(Canvas canvas){
