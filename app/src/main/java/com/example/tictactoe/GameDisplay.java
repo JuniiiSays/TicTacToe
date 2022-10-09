@@ -5,7 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
+import android.widget.Button;
+import android.widget.TextView;
 
 public class GameDisplay extends AppCompatActivity {
 
@@ -16,7 +17,19 @@ public class GameDisplay extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.game_display);
 
+        Button playAgainBTN = findViewById(R.id.button_play_again);
+        Button homeBTN = findViewById(R.id.button_home);
+        TextView playerTurn = findViewById(R.id.player_display);
+
+        String[] playerNames = getIntent().getStringArrayExtra("PLAYERS_NAMES");
+
+        if (playerNames != null){
+            playerTurn.setText((playerNames[0] + "'s Turn"));
+        }
+
         ticTacToeBoard = findViewById(R.id.ticTacToeBoard);
+
+        ticTacToeBoard.setUpGame(playAgainBTN, homeBTN, playerTurn, playerNames);
 
     }
 

@@ -9,7 +9,7 @@
     android:background="#D7CCC8">
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/player_display"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
@@ -31,7 +31,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <Button
-            android:id="@+id/buttonHome"
+            android:id="@+id/button_home"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:background="@drawable/red_button"
@@ -42,7 +42,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/buttonAgain"
+            android:id="@+id/button_play_again"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -50,7 +50,7 @@
             android:onClick="playAgainButtonClick"
             android:text="@string/playAgainButton"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/buttonHome"
+            app:layout_constraintStart_toEndOf="@+id/button_home"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0" />
 

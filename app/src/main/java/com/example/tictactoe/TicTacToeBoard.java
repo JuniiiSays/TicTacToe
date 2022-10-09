@@ -7,6 +7,8 @@ import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
@@ -151,6 +153,13 @@ class TicTacToeBoard extends View {
                 (float)((row * cellSize + cellSize - cellSize * 0.2)),
                             paint);
 
+    }
+
+    public void setUpGame(Button playAgain, Button home, TextView playerDisplay, String[] names){
+        game.setPlayAgainBTN(playAgain);
+        game.setHomeBTN(home);
+        game.setPlayerTurn(playerDisplay);
+        game.setPlayerNames(names);
     }
 
     public void resetGame(){
