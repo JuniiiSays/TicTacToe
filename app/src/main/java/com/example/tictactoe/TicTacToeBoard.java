@@ -77,7 +77,9 @@ class TicTacToeBoard extends View {
 
             invalidate();
 
+            return true;
         }
+        return false;
     }
 
     private void drawGameBoard(Canvas canvas){
