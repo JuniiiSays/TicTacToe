@@ -5,6 +5,7 @@ import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.util.AttributeSet;
+import android.view.MotionEvent;
 import android.view.View;
 
 import androidx.annotation.Nullable;
@@ -60,9 +61,23 @@ class TicTacToeBoard extends View {
         paint.setAntiAlias(true);
 
         drawGameBoard(canvas);
+        drawMarkers(canvas);
+    }
 
-        drawX(canvas, 1, 1);
-        drawO(canvas, 0, 1);
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        float x = event.getX();
+        float y = event.getY();
+
+        int action = event.getAction();
+
+        if (action == MotionEvent.ACTION_DOWN){
+            int row = (int) Math.ceil(y / cellSize);
+            int col = (int) Math.ceil(x / cellSize);
+
+            invalidate();
+
+        }
     }
 
     private void drawGameBoard(Canvas canvas){
