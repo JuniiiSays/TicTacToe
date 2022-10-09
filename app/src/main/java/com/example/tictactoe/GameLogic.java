@@ -53,7 +53,7 @@ class GameLogic {
       }
 
       for (int c = 0; c < 3; c++){
-         if (gameBoard[c][0] == gameBoard[c][1] && gameBoard[c][0] == gameBoard[c][2] && gameBoard[c][0] != 0){
+         if (gameBoard[0][c] == gameBoard[1][c] && gameBoard[0][c] == gameBoard[2][c] && gameBoard[0][c] != 0){
             isWinner = true;
          }
       }
