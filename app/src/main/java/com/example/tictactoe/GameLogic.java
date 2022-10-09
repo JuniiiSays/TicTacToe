@@ -3,6 +3,7 @@ package com.example.tictactoe;
 class GameLogic {
 
    private int [][] gameBoard;
+   private int player = 1;
 
    GameLogic(){
       gameBoard = new int[3][3];
@@ -13,7 +14,26 @@ class GameLogic {
       }
    }
 
+   public boolean updateGameBoard(int row, int col){
+      if (gameBoard[row -1][col - 1] == 0){
+         gameBoard[row -1][col - 1] = player;
+
+         return true;
+
+      } else {
+         return false;
+      }
+   }
+
    public int[][] getGameBoard() {
       return gameBoard;
+   }
+
+   public void setPlayer(int player) {
+      this.player = player;
+   }
+
+   public int getPlayer() {
+      return player;
    }
 }
