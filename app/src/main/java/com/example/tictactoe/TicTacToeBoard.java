@@ -18,10 +18,14 @@ class TicTacToeBoard extends View {
 
     private final Paint paint = new Paint();
 
+    private final GameLogic game;
+
     private int cellSize = getWidth() / 3;
 
     public TicTacToeBoard(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
+
+        game = new GameLogic();
 
         TypedArray a = context.getTheme().obtainStyledAttributes(attrs, R.styleable.TicTacToeBoard, 0, 0);
 
@@ -72,6 +76,20 @@ class TicTacToeBoard extends View {
 
         for (int r = 1; r < 3; r++){
             canvas.drawLine(0, cellSize * r, canvas.getWidth(), cellSize * r, paint);
+        }
+    }
+
+    private void drawMarkers(Canvas canvas){
+        for (int r = 0; r < 3; r++){
+            for (int c = 0; c < 3; c++){
+                if (game.getGameBoard() [r][c] != 0){
+                    if (game.getGameBoard() [r][c] == 1){
+                        drawX(canvas, r, c );
+                    } else {
+                        drawO(canvas, r, c);
+                    }
+                }
+            }
         }
     }
 
