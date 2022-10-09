@@ -79,16 +79,23 @@ class TicTacToeBoard extends View {
             int row = (int) Math.ceil(y / cellSize);
             int col = (int) Math.ceil(x / cellSize);
 
-            if (game.updateGameBoard(row, col)){
-                invalidate();
+            if (!winningLine){
+                if (game.updateGameBoard(row, col)){
+                    invalidate();
 
-                // Updating the Player Turns
-                if (game.getPlayer() % 2 == 0){
-                    game.setPlayer(game.getPlayer() - 1);
-                } else {
-                    game.setPlayer(game.getPlayer() + 1);
+                    if (game.winnerCheck()){
+                        winningLine = true;
+                        invalidate();
+                    }
+
+                    // Updating the Player Turns
+                    if (game.getPlayer() % 2 == 0){
+                        game.setPlayer(game.getPlayer() - 1);
+                    } else {
+                        game.setPlayer(game.getPlayer() + 1);
+                    }
+
                 }
-
             }
 
             invalidate();
