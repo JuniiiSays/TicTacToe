@@ -19,6 +19,8 @@ class TicTacToeBoard extends View {
     private final int OColor;
     private final int winningLineColor;
 
+    private boolean winningLine = false;
+
     private final Paint paint = new Paint();
 
     private final GameLogic game;
