@@ -15,8 +15,6 @@ public class GameDisplay extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.game_display);
-
-
     }
 
     public void playAgainButtonClick(View view){

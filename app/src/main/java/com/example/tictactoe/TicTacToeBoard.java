@@ -78,6 +78,7 @@ class TicTacToeBoard extends View {
             if (game.updateGameBoard(row, col)){
                 invalidate();
 
+                // Updating the Player Turns
                 if (game.getPlayer() % 2 == 0){
                     game.setPlayer(game.getPlayer() - 1);
                 } else {
@@ -150,6 +151,10 @@ class TicTacToeBoard extends View {
                 (float)((row * cellSize + cellSize - cellSize * 0.2)),
                             paint);
 
+    }
+
+    public void resetGame(){
+        game.resetGame();
     }
 
 }
